@@ -1,0 +1,16 @@
+.container{
+    @apply w-full flex flex-col items-center pt-16 ; 
+}
+
+.main{
+    @apply  flex flex-col ;
+}
+
+
+.label{
+    @apply tracking-tighter text-[0.95rem] font-semibold text-gray-600 mb-3 ;
+}
+
+.items{
+    @apply flex flex-row  space-x-3;
+}

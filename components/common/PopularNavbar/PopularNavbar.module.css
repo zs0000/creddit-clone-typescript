@@ -1,0 +1,60 @@
+.container {
+    @apply w-full flex flex-col ;
+}
+
+.main {
+    @apply  w-full mt-3 flex flex-row  bg-white rounded border border-[#6464645a] px-4;
+    height: 60px;
+}
+
+.items{
+    @apply flex flex-row items-center h-full space-x-5 text-[0.9rem] tracking-tight font-bold;
+    width: 95%;
+}
+
+.label{
+    @apply mt-4 text-[0.9rem] tracking-tight font-medium text-gray-700;
+}
+
+.hot{
+    @apply   text-sky-600 ml-1;
+}
+
+.loclabel{
+    @apply text-sky-600   ;
+}
+
+.itemcontainer{
+    @apply flex flex-row items-center p-1 bg-slate-100 rounded-xl;
+}
+
+.locationcontainer{
+    @apply flex flex-row items-center p-1 px-4 bg-slate-100 rounded-xl mr-2;
+}
+
+.newcontainer{
+    @apply flex flex-row items-center;
+}
+.newlabel{
+    @apply text-[#aaa9a9] ml-2;
+}
+
+.topcontainer{
+    @apply flex flex-row items-center;
+}
+
+.toplabel{
+    @apply text-[#aaa9a9] ml-2;
+}
+
+.dotdotdotcontainer{
+    @apply flex items-center justify-center;
+}
+
+.endcontainer{
+    @apply flex justify-end items-center ;
+}
+
+.postlink{
+    @apply text-xs font-bold text-white bg-slate-500 shadow p-1 rounded-lg mr-2 text-center;
+}

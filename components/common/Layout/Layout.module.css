@@ -1,0 +1,7 @@
+.container {
+    @apply bg-[#DAE0E6] w-full flex flex-col items-center min-h-screen;
+}
+
+.main {
+    @apply  md:w-[95%] lg:w-[870%] xl:w-[50%] flex flex-col  bg-[#DAE0E6] ;
+}

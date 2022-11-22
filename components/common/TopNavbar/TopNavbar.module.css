@@ -1,0 +1,82 @@
+.container {
+    @apply bg-white w-full flex flex-row fixed border-b border-[#daeeff9a] shadow-sm;
+    height: 50px;
+}
+
+.group{
+    @apply flex items-center  rounded-full;
+    width: 50%;
+    height: 100%;
+}
+.search{
+    @apply outline-none border   bg-slate-100  px-2 rounded-full hover:border-sky-600;
+    height: 80%;
+}
+
+.rightcontainer {
+    @apply flex flex-row justify-center items-center;
+    width: 25%;
+    height:50px;
+}
+
+.signupbutton{
+    @apply text-[#0079D3] mx-1 border border-[#0079D3] font-bold rounded-2xl text-sm;
+    height: 65%;
+    width: 35%;
+}
+
+.button{
+    @apply  bg-[#0079D3] mx-1 text-white font-bold rounded-2xl text-sm;
+    height: 65%;
+    width: 35%;
+}
+
+.search{
+    @apply w-full  ;
+    
+}
+.arrowsvgcontainer{
+    @apply flex items-center justify-end pr-2;
+    height: 50px;
+    width: 50px;
+}
+
+.usercontainer {
+    @apply flex flex-row items-center justify-center  shadow-sm my-2;
+    width: 60px;
+
+}
+
+.usersvgcontainer{
+    @apply flex items-center justify-center ;
+    height: 100%;
+    width: 100%;
+
+}
+.usersvg{
+    width:70%;
+    height: 70%;
+}
+
+.arrowsvg{
+    width: 20%;
+    height: 20%;
+}
+.searchsvg{
+    @apply ml-2;
+    width: 20px;
+    height: 20px ;    
+}
+
+.svgcontainer {
+    @apply flex items-center  ml-4;
+   width: 50px;
+   height: 50px;
+}
+
+.redditsvg{
+    @apply relative;
+    width: 65%;
+    height:65%;
+}
+

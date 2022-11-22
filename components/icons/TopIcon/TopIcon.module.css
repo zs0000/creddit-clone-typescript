@@ -1,0 +1,11 @@
+.container{
+    @apply flex items-center ;
+    width: 18x;
+    height: 18px;
+}
+
+.svg{
+    @apply opacity-40;
+    width: 100%;
+    height:100%;
+}

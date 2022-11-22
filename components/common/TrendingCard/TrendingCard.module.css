@@ -1,0 +1,33 @@
+.card{
+    @apply bg-black  rounded-xl;
+
+}
+
+.imagecontainer{
+    @apply w-full h-full relative flex;
+}
+
+.image{
+    @apply object-cover rounded-xl;
+}
+
+.test{
+    @apply w-full h-full rounded-xl absolute flex flex-col justify-end;
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0))
+}
+
+.title{
+    @apply text-white font-semibold text-[1.15rem] leading-tight tracking-tight mx-2;
+}
+
+.description{
+    @apply text-white leading-tight mx-2 text-[0.95rem] tracking-tight;
+}
+
+.subreddit{
+    @apply text-[0.7rem] text-white tracking-tight ml-1 ;
+}
+
+.bottom{
+    @apply flex flex-row items-center ml-3 py-2;
+}

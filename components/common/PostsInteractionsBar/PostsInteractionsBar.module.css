@@ -1,0 +1,11 @@
+.container{
+    @apply w-full flex flex-row space-x-6;
+}
+
+.label{
+    @apply ml-1  text-[#646464b3]  tracking-tight text-[0.7rem] font-bold;
+}
+
+.item{
+    @apply flex flex-row justify-center items-center;
+}

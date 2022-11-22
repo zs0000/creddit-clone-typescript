@@ -1,0 +1,40 @@
+.container{
+    @apply w-full bg-white border flex flex-row border-[#6464645a] rounded p-2;
+    min-height: 100px;
+}
+
+.upvotes{
+    @apply mr-2 text-[0.8rem] flex flex-col items-center tracking-tighter font-bold text-[#646464];
+}
+
+.primaryinfo{
+    @apply flex flex-col w-full;
+}
+
+.postinfo{
+    @apply flex flex-row space-x-2 text-[0.75rem];
+}
+
+.subreddit{
+    @apply font-semibold;
+}
+
+.author{
+    @apply text-[#646464b3];
+}
+
+.time{
+    @apply text-[#646464b3];
+}
+
+.dot{
+    @apply -mt-1 font-bold;
+}
+
+.posttitle{
+    @apply w-full my-3  text-[1.1rem];
+}
+
+.title{
+    @apply font-semibold ;
+}

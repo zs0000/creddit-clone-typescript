@@ -1,0 +1,25 @@
+.container{
+    @apply flex flex-row h-full;
+}
+
+.contentsvgcontainer{
+    @apply flex items-center mr-2;
+    width: 50px;
+    height: 50px;
+}
+
+.contentsvg{
+    width:40%;
+    height: 40%;
+}
+
+.arrowsvgcontainer{
+    @apply flex items-center;
+    height: 50px;
+    width: 50px;
+}
+
+.arrowsvg{
+    width: 20%;
+    height: 20%;
+}
