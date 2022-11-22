@@ -9,6 +9,10 @@ import type { NextPage } from 'next'
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 const Home: NextPage = () => {
+  const supabase = useSupabaseClient();
+  const session = useSession();
+
+
   
   return (
     <Layout>

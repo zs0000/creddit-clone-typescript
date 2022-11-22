@@ -25,7 +25,27 @@ export interface Database {
           updated_at?: string | null
           username?: string | null
         }
-      }
+      },
+      posts: {
+        Row: {
+          id: string
+          created_at: string | null
+          title: string
+          post_text: string
+          author_id: string
+          subreddit_id: string
+          post_image?:string | null
+        }
+        Insert: {
+          id: string
+          created_at: string | null
+          title: string
+          post_text: string
+          author_id: string
+          subreddit_id: string
+          post_image?:string | null
+        }
+        }
     }
     Views: {
       [_ in never]: never

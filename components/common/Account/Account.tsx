@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { useUser, useSupabaseClient, Session} from '@supabase/auth-helpers-react'
-
+import {useRouter} from "next/router"
 import { Database } from '../../../utils/database.types'
 type Profiles = Database['public']['Tables']['profiles']['Row']
 
 export default function Account({session}: {session:Session}){
   const supabase = useSupabaseClient<Database>();
   const user = useUser()
+  const router = useRouter()
   const [loading, setLoading] = useState(true)
   const [username, setUsername] = useState<Profiles['username']>(null)
 
@@ -60,7 +61,9 @@ export default function Account({session}: {session:Session}){
       
     }
   }
-
+if(username){
+  router.push("/")
+}
 
   return(
     <div>

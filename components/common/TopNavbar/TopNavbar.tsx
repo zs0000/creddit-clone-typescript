@@ -1,10 +1,49 @@
-import { useSession } from "@supabase/auth-helpers-react";
+import { Session, useSession, useSupabaseClient, useUser } from "@supabase/auth-helpers-react";
 import Link from "next/link"
+import { useEffect, useState } from "react";
 import NavDropdown from "../NavDropdown/NavDropdown"
 import s from "./TopNavbar.module.css"
+import { Database } from '../../../utils/database.types'
+type Profiles = Database['public']['Tables']['profiles']['Row']
+export default function TopNavbar({session} : {session:Session}) {
 
-export default function TopNavbar() {
-  const session = useSession();
+  const [loading, setLoading] = useState(true);
+  const [username, setUsername] = useState<Profiles['username']>(null);
+  const supabase = useSupabaseClient();
+
+  async function getUsername(){
+    try {
+      setLoading(true);
+      if(session){
+        let{data,error} = await supabase
+      .from('profiles')
+      .select('username')
+      .eq('id', session.user.id)
+      .single()
+      if (data){
+        setUsername(data.username)
+      }
+      }
+      
+    } catch (error) {
+      alert("error retrieving username @ top navbar")
+      console.log(error)
+    } finally{
+      setLoading(false)
+    }
+  }
+
+
+  useEffect(()=>{
+    getUsername()
+  },[session])
+  if(loading){
+    return(
+      <div className={s.loading}>
+        
+      </div>
+    )
+   }
   return (
     <div className={s.container}>
         <div className={s.leftcontainer}>
@@ -39,17 +78,20 @@ export default function TopNavbar() {
             placeholder="Search Reddit" />
         </div>
         <div className={s.rightcontainer}>
-          {!session ? <>
+          
+           {!session ? <>
             <Link href="/sign-up/" className={s.signupbutton}>
             Sign Up
           </Link>
           <button className={s.button}>
             Log In
           </button></>
-           :
-           <>
-           hello signed in fellow
-           </>}
+          :
+          <>
+          Hello {username}
+          </>
+          }
+         
         </div>
         <div className={s.usercontainer}>
           <div className={s.usersvgcontainer}>

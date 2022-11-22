@@ -80,3 +80,6 @@
     height:65%;
 }
 
+.loading{
+    @apply bg-slate-100 fixed animate-pulse w-full h-[50px] text-center shadow-neutral-100;
+}
